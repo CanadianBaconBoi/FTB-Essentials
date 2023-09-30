@@ -46,3 +46,8 @@ jobs:
           CURSEFORGE_KEY: ${{ secrets.CURSEFORGE_KEY }}
         with:
           arguments: build curseforge --stacktrace --no-daemon
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: FTB-Essentials
+          path: build/libs
